@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content" android:paddingTop="5dp"
+                                                   android:paddingLeft="5dp" android:paddingRight="5dp"
+                                                   android:paddingBottom="5dp">
+
+    <ImageButton
+            android:layout_height="100dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="100dp"/>
+    <TextView
+            android:text="Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/tvName"
+            app:layout_constraintStart_toEndOf="@+id/imageButton" app:layout_constraintTop_toTopOf="@+id/imageButton"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="15dp" android:textSize="20sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/tvAnime"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" app:layout_constraintEnd_toEndOf="@+id/tvName"
+            app:layout_constraintStart_toStartOf="@+id/tvName" android:textSize="14sp" android:layout_marginTop="10dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_compass"
+            android:id="@+id/ivFavourite" app:layout_constraintTop_toBottomOf="@+id/tvAnime"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton" app:layout_constraintEnd_toEndOf="@+id/tvAnime"/>
+    <TextView
+            android:text="Legal:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/tvLegalAge"
+            app:layout_constraintStart_toStartOf="@+id/tvAnime" app:layout_constraintTop_toBottomOf="@+id/tvAnime"
+            android:textSize="12sp" app:layout_constraintBottom_toBottomOf="@+id/imageButton"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_delete"
+            android:id="@+id/ivNotLegal" app:layout_constraintStart_toEndOf="@+id/tvLegalAge"
+            app:layout_constraintTop_toTopOf="@+id/ivFavourite"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFavourite" android:layout_marginStart="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
